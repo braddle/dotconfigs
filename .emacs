@@ -1,0 +1,72 @@
+;; File:   .emacs
+;; Author: Mark Bradley
+
+;; Global Setting
+;; --------------
+
+(global-set-key [home] 'beginning-of-line)
+(global-set-key [end] 'end-of-line)
+
+(global-set-key "\M-g" 'goto-line)
+;(global-set-key "\C-\M-<" 'beginning-of-buffer)
+;(global-set-key "\C-\M->" 'end-of-buffer)
+
+;; Visual feedback on selections
+(setq-default transient-mark-mode t)
+
+show-paren-mode(show-paren-mode)
+
+; menu is waste of space!
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+
+;; PHP Mode
+;; --------
+
+(setq c-default-style "bsd"
+      tab-width 4)
+
+; Method insert function
+(defun mbradley-insert-method ()
+  "Insert a new method with complete author tag."
+  (interactive)
+  (indent-for-tab-command)
+  (insert "/**")
+  (newline)
+
+  (insert "*")
+  (indent-for-tab-command)
+  (newline)
+
+  (insert "* @author Mark Bradley<mark@mark-bradley.net>")
+  (indent-for-tab-command)
+  (newline)
+
+  (insert "* @params ")
+  (indent-for-tab-command)
+  (newline)
+
+  (insert "* @returns ")
+  (indent-for-tab-command)
+  (newline)
+
+  (indent-for-tab-command)
+  (insert "*/")
+  (newline)
+
+  (indent-for-tab-command)
+  (insert "public function ()")
+  (newline)
+
+  (insert "{")
+  (indent-for-tab-command)
+  (newline)
+
+  (insert "}")
+  (indent-for-tab-command)
+  (newline)
+
+  (search-backward "(")
+)
+
+;; Ctrl-Alt-m for insert method
+(global-set-key "\C-\M-m" 'mbradley-insert-method)
