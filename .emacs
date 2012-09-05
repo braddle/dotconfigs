@@ -68,5 +68,45 @@ show-paren-mode(show-paren-mode)
   (search-backward "(")
 )
 
-;; Ctrl-Alt-m for insert method
+(defun mbradley-insert-class ()
+  "Insert a new method with complete author tag."
+  (interactive)
+  
+  (insert "<?php")
+  (newline)
+  (newline)
+
+  (indent-for-tab-command)
+  (insert "/**")
+  (newline)
+
+  (insert "*")
+  (indent-for-tab-command)
+  (newline)
+
+  (insert "* @author Mark Bradley<mark@mark-bradley.net>")
+  (indent-for-tab-command)
+  (newline)
+
+  (indent-for-tab-command)
+  (insert "*/")
+  (newline)
+
+  (indent-for-tab-command)
+  (insert "class")
+  (newline)
+
+  (insert "{")
+  (indent-for-tab-command)
+  (newline)
+
+  (insert "}")
+  (indent-for-tab-command)
+  (newline)
+
+  (search-backward "class")
+)
+
+;; Ctrl-Alt-? function setup
 (global-set-key "\C-\M-m" 'mbradley-insert-method)
+(global-set-key "\C-\M-c" 'mbradley-insert-class)
