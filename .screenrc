@@ -1,0 +1,14 @@
+escape ``
+
+# Turns visual bell off
+vbell off 
+
+# don't display the copyright page
+startup_message off
+
+# keep scrollback n lines
+efscrollback 10000
+
+#Setup the statusbar
+hardstatus alwayslastline
+hardstatus string '%{= kG}%-Lw%{= kW}%50> %n*%f %t%{= kG}%+Lw%< %{= kG}%-=| %m/%d/%y | %c:%s | %l'
