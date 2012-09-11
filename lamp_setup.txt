@@ -6,5 +6,5 @@ Apache Setup
 PHP Setup 
 ---------
 
-./configure --with-apxs2=/usr/local/apache2/bin/apxs --enable-mbstring --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-curl --with-gd --with-openssl --enable-simplexml
+./configure --with-apxs2=/usr/local/apache2/bin/apxs --enable-mbstring --with-mysql=mysqlnd --with-pdo-mysql=mysqlnd --with-mysqli=mysqlnd --with-curl --with-gd --with-openssl --enable-simplexml --enable-intl
 
