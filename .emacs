@@ -4,6 +4,9 @@
 ;; Global Setting
 ;; --------------
 
+;; Ensure the correct font lock mode is used.
+(global-font-lock-mode 1)
+
 (global-set-key [home] 'beginning-of-line)
 (global-set-key [end] 'end-of-line)
 
