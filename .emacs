@@ -44,6 +44,10 @@ show-paren-mode(show-paren-mode)
   (indent-for-tab-command)
   (newline)
 
+  (insert "* @access public")
+  (indent-for-tab-command)
+  (newline)
+
   (insert "* @params ")
   (indent-for-tab-command)
   (newline)
