@@ -1,7 +1,18 @@
+APR
+---
+
+./config
+
+APR-Util
+--------
+
+./config --with-apr=/usr/local/apr/
+
 Apache Setup
 ------------
 
 ./configure --enable-file-cache --enable-cache --enable-disk-cache --enable-mem-cache --enable-expires --enable-headers --enable-usertrack --enable-ssl --enable-cgi --enable-vhost-alias --enable-rewrite --enable-so --with-apr=/usr/local/apr/
+
 
 PHP Setup 
 ---------
