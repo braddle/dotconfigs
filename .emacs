@@ -22,6 +22,15 @@ show-paren-mode(show-paren-mode)
 ; menu is waste of space!
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+; Don't create a backup file                                                                                                                                                                                   
+(setq make-backup-files nil)
+
+; Show line-number in the mode line                                                                                                                                                                            
+(line-number-mode 1)
+
+; Show column-number in the mode line                                                                                                                                                                          
+(column-number-mode 1)
+
 ;; PHP Mode
 ;; --------
 
