@@ -8,6 +8,7 @@
 (add-to-list 'load-path "~/elisp")
 
 (require 'php-mode)
+(require 'php-completion)
 
 ;; Pre-save hooks
 ;; (add-hook 'before-save-hook "delete-trailing-whitespace")
@@ -41,6 +42,12 @@ show-paren-mode(show-paren-mode)
 
 ;; PHP Mode
 ;; --------
+
+(add-hook 'php-mode-hook
+           (lambda ()
+             (require 'php-completion)
+             (php-completion-mode t)
+             (define-key php-mode-map (kbd "C-o") 'phpcmp-complete)))
 
 (setq c-default-style "bsd"
       tab-width 4)
