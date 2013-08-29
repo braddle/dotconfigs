@@ -5,6 +5,14 @@
 ;; --------------
 
 ;; Ensure the correct font lock mode is used.
+(add-to-list 'load-path "~/elisp")
+
+(require 'php-mode)
+
+;; Pre-save hooks
+;; (add-hook 'before-save-hook "delete-trailing-whitespace")
+
+;; Ensure the correct font lock mode is used.
 (global-font-lock-mode 1)
 
 (global-set-key [home] 'beginning-of-line)
@@ -22,13 +30,13 @@ show-paren-mode(show-paren-mode)
 ; menu is waste of space!
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-; Don't create a backup file                                                                                                                                                                                   
+; Don't create a backup file                                                                                                                                                                                  
 (setq make-backup-files nil)
 
-; Show line-number in the mode line                                                                                                                                                                            
+; Show line-number in the mode line                                                                                                                                                                           
 (line-number-mode 1)
 
-; Show column-number in the mode line                                                                                                                                                                          
+; Show column-number in the mode line                                                                                                                                                                         
 (column-number-mode 1)
 
 ;; PHP Mode
